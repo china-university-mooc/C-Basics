@@ -1,32 +1,32 @@
 #include <stdio.h>
+#include <math.h>
 #include <stdbool.h>
 
-int main(int argc, const char * argv[]) {
-    int m, n;
-    scanf("%d %d", &m, &n);
-    
-    
-    int i, j, s;
-    bool flag = false;
-    for (i = m; i <= n; i++) {
-        s = 1;
-        for (j = 2; j <= i/2; j++) {
-            if (i%j == 0) {
-                s = s + j;
-            }
-        }
-        if (s == i) {
-            flag = true;
-            printf("%d = 1", i);
-            for (j = 2; j <= i/2; j++) {
-                if (i%j == 0) {
-                    printf(" + %d", j);
-                }
-            }
-            printf("\n");
+bool isPrime(int num) {
+    if (num < 2) {
+        return false;
+    }
+    for (int i = 2; i <= sqrt(num); i++) {
+        if (num % i == 0) {
+            return false;
         }
     }
-    if (!flag) {
+    return true;
+}
+
+int main(int argc, const char * argv[]) {
+    int n;
+    scanf("%d", &n);
+    
+    bool flag = true;
+    for (int i = 1; i <= n; i++) {
+        int num = pow(2, i) - 1;
+        if (isPrime(num)) {
+            flag = false;
+            printf("%d\n", num);
+        }
+    }
+    if (flag) {
         printf("None\n");
     }
     
