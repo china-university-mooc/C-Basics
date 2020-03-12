@@ -41,7 +41,7 @@
 		0F08DB722418E44200CD26D6 = {
 			isa = PBXGroup;
 			children = (
-				0F08DB7D2418E44200CD26D6 /* C-Experiment */,
+				0F08DB7D2418E44200CD26D6 /* C-Basics */,
 				0F08DB7C2418E44200CD26D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F08DB7D2418E44200CD26D6 /* C-Experiment */ = {
+		0F08DB7D2418E44200CD26D6 /* C-Basics */ = {
 			isa = PBXGroup;
 			children = (
 				0F08DB7E2418E44200CD26D6 /* main.c */,
 			);
-			path = "C-Experiment";
+			path = "C-Basics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Experiment" */;
+			buildConfigurationList = 0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Basics" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -254,7 +254,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Experiment" */ = {
+		0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Basics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F08DB802418E44200CD26D6 /* Debug */,
