@@ -2,22 +2,12 @@
 #include <math.h>
 
 int main() {
-    int num;
-    scanf("%d", &num);
     
-    if (num < 0) {
-        num = -1 * num;
+    int x = 1;
+    while(!((x % 5 == 1) && (x % 6 == 5) && (x % 7 == 4) && (x % 11 == 10))) {
+        x++;
     }
-    int digit;
-    int sum = 0;
-    int count = 0;
-    do {
-        digit = num % 10;
-        sum += digit;
-        num /= 10;
-        count++;
-    } while(num > 0);
+    printf("%d\n", x);
     
-    printf("%d %d\n", count, sum);
     return 0;
 }
