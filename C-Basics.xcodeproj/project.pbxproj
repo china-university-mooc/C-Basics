@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F08DB7B2418E44200CD26D6 /* C-Experiment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C-Experiment"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F08DB7B2418E44200CD26D6 /* C-Basics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C-Basics"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F08DB7E2418E44200CD26D6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		0F08DB722418E44200CD26D6 = {
 			isa = PBXGroup;
 			children = (
-				0F08DB7D2418E44200CD26D6 /* C-Experiment */,
+				0F08DB7D2418E44200CD26D6 /* C-Basics */,
 				0F08DB7C2418E44200CD26D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		0F08DB7C2418E44200CD26D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F08DB7B2418E44200CD26D6 /* C-Experiment */,
+				0F08DB7B2418E44200CD26D6 /* C-Basics */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F08DB7D2418E44200CD26D6 /* C-Experiment */ = {
+		0F08DB7D2418E44200CD26D6 /* C-Basics */ = {
 			isa = PBXGroup;
 			children = (
 				0F08DB7E2418E44200CD26D6 /* main.c */,
 			);
-			path = "C-Experiment";
+			path = "C-Basics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F08DB7A2418E44200CD26D6 /* C-Experiment */ = {
+		0F08DB7A2418E44200CD26D6 /* C-Basics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F08DB822418E44200CD26D6 /* Build configuration list for PBXNativeTarget "C-Experiment" */;
+			buildConfigurationList = 0F08DB822418E44200CD26D6 /* Build configuration list for PBXNativeTarget "C-Basics" */;
 			buildPhases = (
 				0F08DB772418E44200CD26D6 /* Sources */,
 				0F08DB782418E44200CD26D6 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = "C-Experiment";
+			name = "C-Basics";
 			productName = "C-Experiment";
-			productReference = 0F08DB7B2418E44200CD26D6 /* C-Experiment */;
+			productReference = 0F08DB7B2418E44200CD26D6 /* C-Basics */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Experiment" */;
+			buildConfigurationList = 0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Basics" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F08DB7A2418E44200CD26D6 /* C-Experiment */,
+				0F08DB7A2418E44200CD26D6 /* C-Basics */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +254,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Experiment" */ = {
+		0F08DB762418E44200CD26D6 /* Build configuration list for PBXProject "C-Basics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F08DB802418E44200CD26D6 /* Debug */,
@@ -263,7 +263,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F08DB822418E44200CD26D6 /* Build configuration list for PBXNativeTarget "C-Experiment" */ = {
+		0F08DB822418E44200CD26D6 /* Build configuration list for PBXNativeTarget "C-Basics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F08DB832418E44200CD26D6 /* Debug */,
