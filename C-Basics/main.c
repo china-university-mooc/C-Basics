@@ -1,35 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int answer, n;
-    scanf("%d %d", &answer, &n);
+    int n;
+    scanf("%d", &n);
     
-    int guess;
-    int count = 0;
-    while(count < n) {
-        scanf("%d", &guess);
-        count++;
-        if (guess < 0 || guess == answer) {
-            break;
-        }
-        if (guess < answer) {
-            printf("Too small\n");
-        } else {
-            printf("Too big\n");
-        }
+    int x1 = 0;
+    int x2 = 1;
+    int month = 1;
+    while(x2 < n) {
+        int temp = x1;
+        x1 = x2;
+        x2 = x2 + temp;
+        month++;
     }
     
-    if (guess == answer) {
-        if (count == 1) {
-            printf("Bingo!\n");
-        } else if (count <= 3) {
-            printf("Lucky You!\n");
-        } else {
-            printf("Good Guess!\n");
-        }
-    } else {
-        printf("Game Over\n");
-    }
-    
+    printf("%d\n", month);
     return 0;
 }
