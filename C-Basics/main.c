@@ -3,20 +3,23 @@
 
 int main() {
     int num;
-    int evenCount = 0;
-    int oddCount = 0;
-    
     scanf("%d", &num);
-    while(num != -1) {
-        if (num % 2 == 0) {
-            evenCount++;
-        } else {
-            oddCount++;
-        }
-        scanf("%d", &num);
+    
+    int digit;
+    int code = 1;
+    int right = 1;
+    int value = 0;
+    while(num > 0) {
+        digit = num % 10;
+        int flag = ((digit + code) % 2) == 0;
+        value += right * flag;
+        
+        code++;
+        right *= 2;
+        num = num / 10;
     }
     
     
-    printf("%d %d\n", oddCount, evenCount);
+    printf("%d\n", value);
     return 0;
 }
