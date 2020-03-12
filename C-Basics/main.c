@@ -1,34 +1,22 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdbool.h>
 
-bool isPrime(int num) {
-    if (num < 2) {
-        return false;
-    }
-    for (int i = 2; i <= sqrt(num); i++) {
-        if (num % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-int main(int argc, const char * argv[]) {
-    int n;
-    scanf("%d", &n);
+int main() {
+    int num;
+    int evenCount = 0;
+    int oddCount = 0;
     
-    bool flag = true;
-    for (int i = 1; i <= n; i++) {
-        int num = pow(2, i) - 1;
-        if (isPrime(num)) {
-            flag = false;
-            printf("%d\n", num);
+    scanf("%d", &num);
+    while(num != -1) {
+        if (num % 2 == 0) {
+            evenCount++;
+        } else {
+            oddCount++;
         }
-    }
-    if (flag) {
-        printf("None\n");
+        scanf("%d", &num);
     }
     
+    
+    printf("%d %d\n", oddCount, evenCount);
     return 0;
 }
