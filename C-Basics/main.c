@@ -1,13 +1,20 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
+    int n;
+    scanf("%d", &n);
     
-    int x = 1;
-    while(!((x % 5 == 1) && (x % 6 == 5) && (x % 7 == 4) && (x % 11 == 10))) {
-        x++;
+    double m = 2.0;
+    double d = 1.0;
+    double sum = 0;
+    while(n > 0) {
+        sum += m / d;
+        double temp = d;
+        d = m;
+        m = m + temp;
+        n--;
     }
-    printf("%d\n", x);
+    printf("%.2f\n", sum);
     
     return 0;
 }
