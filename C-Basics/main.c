@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 int main() {
+    double h;
     int n;
-    scanf("%d", &n);
+    scanf("%lf %d", &h, &n);
     
-    int x1 = 0;
-    int x2 = 1;
-    int month = 1;
-    while(x2 < n) {
-        int temp = x1;
-        x1 = x2;
-        x2 = x2 + temp;
-        month++;
+    double sum = -h;
+    double item = h;
+    if (n == 0) {
+        sum = 0;
+        item = 0;
+    }
+    for (int i = 0; i < n; i++) {
+        sum += 2*item;
+        item /= 2;
     }
     
-    printf("%d\n", month);
+    printf("%.1f %.1f\n", sum, item);
     return 0;
 }
