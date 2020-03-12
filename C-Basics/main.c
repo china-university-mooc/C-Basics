@@ -1,20 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
+    int a, n;
+    scanf("%d %d", &a, &n);
     
-    double m = 2.0;
-    double d = 1.0;
-    double sum = 0;
-    while(n > 0) {
-        sum += m / d;
-        double temp = d;
-        d = m;
-        m = m + temp;
-        n--;
+    int sum = 0;
+    int item = 0;
+    for (int i = 1; i <= n; i++) {
+        item = item * 10 + a;
+        sum += item;
     }
-    printf("%.2f\n", sum);
+    printf("s = %d\n", sum);
     
     return 0;
 }
