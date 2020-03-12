@@ -1,15 +1,18 @@
 #include <stdio.h>
+#include <math.h>
 
-int main(void) {
-    int m, n, j, k;
-    scanf("%d %d", &m, &n);
+int main() {
+    int num;
+    int sum = 0;
     
-    j = m;
-    while (j%n != 0) {
-        j = j + m;
+    scanf("%d", &num);
+    while (num > 0) {
+        if (num % 2 == 1) {
+            sum += num;
+        }
+        scanf("%d", &num);
     }
-    k = (m*n)/j;
-    printf("%d %d\n", k, j);
     
+    printf("%d\n", sum);
     return 0;
 }
