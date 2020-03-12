@@ -1,34 +1,15 @@
 #include <stdio.h>
-#include <math.h>
-#include <stdbool.h>
 
-bool isPrime(int num) {
-    if (num < 2) {
-        return false;
-    }
-    for (int i = 2; i <= sqrt(num); i++) {
-        if (num % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-int main(int argc, const char * argv[]) {
-    int n;
-    scanf("%d", &n);
+int main(void) {
+    int m, n, j, k;
+    scanf("%d %d", &m, &n);
     
-    bool flag = true;
-    for (int i = 1; i <= n; i++) {
-        int num = pow(2, i) - 1;
-        if (isPrime(num)) {
-            flag = false;
-            printf("%d\n", num);
-        }
+    j = m;
+    while (j%n != 0) {
+        j = j + m;
     }
-    if (flag) {
-        printf("None\n");
-    }
+    k = (m*n)/j;
+    printf("%d %d\n", k, j);
     
     return 0;
 }
