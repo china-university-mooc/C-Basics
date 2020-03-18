@@ -1,6 +1,6 @@
 ## Practice and Exercise for [China-University-Mooc](https://github.com/china-university-mooc) *C-Basics*
 
-### Chapter IV
+### Chapter IV: Cyclic Structure
 
 #### Experiment
 - [**IV.1-1-Debug**](https://github.com/china-university-mooc/C-Basics/tree/IV.1-1-Debug)
@@ -23,3 +23,5 @@
 #### Quiz
 - [**IV.3-1-Odd-Even-Count**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-1-Odd-Even-Count)
 - [**IV.3-2-Number-Feature-Value**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-2-Number-Feature-Value)
+- [**IV.3-3-Prime-Sum**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-3-Prime-Sum)
+- [**IV.3-4-Read-Integer**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-4-Read-Integer)
