@@ -1,40 +1,38 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <math.h>
+
+bool isPrime(int num) {
+    if (num < 2) {
+        return false;
+    }
+    
+    int limit = floor(sqrt(num));
+    for (int i = 2; i <= limit; i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
 int main() {
-    int num;
-    scanf("%d", &num);
+    int n, m;
+    scanf("%d %d", &n, &m);
     
-    int a, b, c;
-    int min, mid, max;
-    int n1, n2;
-    int count = 1;
-    do {
-        a = num%10;
-        b = num/100;
-        c = (num - a - b*100)/10;
-        if (a > b) {
-            max = a;
-            min = b;
-        } else {
-            max = b;
-            min = a;
+    int sum = 0;
+    int count = 0;
+    int i = 2;
+    while (count < m) {
+        if (isPrime(i)) {
+            count++;
+            if (count >= n) {
+                sum += i;
+            }
         }
-        if (c > max) {
-            mid = max;
-            max = c;
-        } else if (c < min) {
-            mid = min;
-            min = c;
-        } else {
-            mid = c;
-        }
-        
-        n1 = max*100 + mid*10 + min;
-        n2 = min*100 + mid*10 + max;
-        num = n1 - n2;
-        printf("%d: %d - %d = %d\n", count, n1, n2, num);
-        count++;
-    } while (num != 495);
+        i++;
+    }
+    printf("%d\n", sum);
     
     return 0;
 }
