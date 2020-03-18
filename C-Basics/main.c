@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int celsius, fahr;
-    fahr = 100;
-    celsius = 5 * (fahr-32) / 9;
-    printf("fahr=%d, celsius=%d\n", fahr, celsius);
+    int a = 10;
+    int t = 3;
+    double height = a * t * t * 0.5;
+    printf("height = %.2f\n", height);
     
     return 0;
 }
