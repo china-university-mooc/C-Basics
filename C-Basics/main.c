@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int bjt;
-    scanf("%d", &bjt);
-    int bjtH = bjt / 100;
-    int bjtM = bjt % 100;
+    int n;
+    scanf("%d", &n);
     
-    int utcH = bjtH - 8;
-    if (utcH < 0) {
-        utcH += 24;
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 == 1) {
+            if (i != 1) {
+                printf(" ");
+            }
+            printf("%d", i);
+        }
     }
-    int utc = utcH * 100 + bjtM;
-    
-    printf("%d\n", utc);
+    printf("\n");
     return 0;
 }
