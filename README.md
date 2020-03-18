@@ -1,5 +1,19 @@
 ## Practice and Exercise for [China-University-Mooc](https://github.com/china-university-mooc) *C-Basics*
 
+### Chapter III: Branch Structure
+
+#### Experiment
+- [**III.1-1-Debug**](https://github.com/china-university-mooc/C-Basics/tree/III.1-1-Debug)
+- [**III.1-3-Compare-Three-Numbers**](https://github.com/china-university-mooc/C-Basics/tree/III.1-3-Compare-Three-Numbers)
+- [**III.1-8-Error**](https://github.com/china-university-mooc/C-Basics/tree/III.1-8-Error)
+- [**III.1-9-Fishing-And-Drying**](https://github.com/china-university-mooc/C-Basics/tree/III.1-9-Fishing-And-Drying)
+
+
+#### Quiz
+- [**III.2-1-Time-Conversion**](https://github.com/china-university-mooc/C-Basics/tree/III.2-1-Time-Conversion)
+- [**III.2-2-Divide-Queue**](https://github.com/china-university-mooc/C-Basics/tree/III.2-2-Divide-Queue)
+
+
 ### Chapter IV: Cyclic Structure
 
 #### Experiment
