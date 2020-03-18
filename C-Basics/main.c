@@ -2,19 +2,15 @@
 #include <math.h>
 
 int main() {
-    double a, b, c;
-    double area, perimeter, s;
+    int day;
+    scanf("%d", &day);
     
-    scanf("%lf %lf %lf", &a, &b, &c);
-    
-    if (a + b > c && b + c > a && a + c > b) {
-        s = (a + b + c)/2;
-        area = sqrt(s * (s - a) * (s - b) * (s - c));
-        perimeter = a + b + c;
-        printf("area = %.2f; perimeter = %.2f\n", area, perimeter);
+    int mod = (day - 1)%5 + 1;
+    if (mod < 4) {
+        printf("Fishing in day %d\n", day);
+    } else {
+        printf("Drying in day %d\n", day);
     }
-    else
-        printf("These sides do not correspond to a valid triangle\n");
     
     return 0;
 }
