@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int a = 10;
-    int t = 3;
-    double height = a * t * t * 0.5;
-    printf("height = %.2f\n", height);
+    int x, y;
+
+    x = 3;
+    y = x * x;
+    printf("%d = %d * %d\n", y, x, x);
+    printf("%d * %d = %d\n", x, x, y);
     
     return 0;
 }
