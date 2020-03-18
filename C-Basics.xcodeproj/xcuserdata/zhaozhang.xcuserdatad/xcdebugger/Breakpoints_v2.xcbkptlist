@@ -14,26 +14,8 @@
             filePath = "C-Basics/main.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "main()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BC4E3904-DC2B-4224-BA8F-45BDA8D9C99C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "C-Basics/main.c"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
-            landmarkName = "main()"
-            landmarkType = "9">
+            startingLineNumber = "30"
+            endingLineNumber = "30">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
