@@ -1,69 +1,37 @@
 #include <stdio.h>
-
-void printSpell(int digit) {
-    switch (digit) {
-        case 0:
-            printf("ling");
-            break;
-        case 1:
-            printf("yi");
-            break;
-        case 2:
-            printf("er");
-            break;
-        case 3:
-            printf("san");
-            break;
-        case 4:
-            printf("si");
-            break;
-        case 5:
-            printf("wu");
-            break;
-        case 6:
-            printf("liu");
-            break;
-        case 7:
-            printf("qi");
-            break;
-        case 8:
-            printf("ba");
-            break;
-        case 9:
-            printf("jiu");
-            break;
-    }
-}
-
-int getDivisor(int num) {
-    int divisor = 1;
-    while (num  > 9) {
-        divisor *= 10;
-        num /= 10;
-    }
-    return divisor;
-}
+#include <math.h>
 
 int main() {
-    int num;
-    scanf("%d", &num);
+    double a, b, c, d;
     
-    if (num < 0) {
-        printf("fu ");
-        num = -num;
-    }
-
-    int divisor = getDivisor(num);
-    while (divisor > 0) {
-        int digit = num / divisor;
-        printSpell(digit);
-        if (divisor > 9) {
-            printf(" ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+    d = b*b - 4*a*c;
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                printf("Zero Equation\n");
+            } else {
+                printf("Not An Equation\n");
+            }
+        } else {
+            printf("%0.2f\n", -c/b);
         }
-        num %= divisor;
-        divisor /= 10;
+    } else {
+        if (d == 0) {
+            printf("%0.2f\n", -b/(2*a));
+        } else if (d > 0) {
+            printf("%0.2f\n", (-b + sqrt(d))/(2*a));
+            printf("%0.2f\n", (-b - sqrt(d))/(2*a));
+        } else {
+            if (b == 0) {
+                printf("%0.2f+%0.2fi\n", b/(2*a), sqrt(-d)/(2*a));
+                printf("%0.2f-%0.2fi\n", b/(2*a), sqrt(-d)/(2*a));
+            } else {
+                printf("%0.2f+%0.2fi\n", -b/(2*a), sqrt(-d)/(2*a));
+                printf("%0.2f-%0.2fi\n", -b/(2*a), sqrt(-d)/(2*a));
+            }
+        }
     }
-    printf("\n");
     
     return 0;
 }
