@@ -1,15 +1,11 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    double x, y;
+    double money, year, rate;
     
-    scanf("%lf", &x);
-    if (x !=0 ) {
-        y = 1 / x;
-    } else {
-        y = 0;
-    }
-    printf("f(%.1f) = %.1f\n", x, y);
+    scanf("%lf %lf %lf", &money, &year, &rate);
+    double interest = money * pow(1 + rate, year) - money;
     
-    return 0;
+    printf("interest = %.2f\n", interest);
 }
