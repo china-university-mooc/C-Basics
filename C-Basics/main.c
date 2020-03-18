@@ -1,29 +1,20 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    int x, y, z;
-    scanf("%d %d %d", &x, &y, &z);
+    double a, b, c;
+    double area, perimeter, s;
     
-    int min, max, mid;
-    if (x >= y) {
-        max = x;
-        min = y;
-    } else {
-        max = y;
-        min = x;
+    scanf("%lf %lf %lf", &a, &b, &c);
+    
+    if (a + b > c && b + c > a && a + c > b) {
+        s = (a + b + c)/2;
+        area = sqrt(s * (s - a) * (s - b) * (s - c));
+        perimeter = a + b + c;
+        printf("area = %.2f; perimeter = %.2f\n", area, perimeter);
     }
-    
-    if (z > max) {
-        mid = max;
-        max = z;
-    } else if (z < min) {
-        mid = min;
-        min = z;
-    } else {
-        mid = z;
-    }
-    
-    printf("%d->%d->%d\n", min, mid, max);
+    else
+        printf("These sides do not correspond to a valid triangle\n");
     
     return 0;
 }
