@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int x, y;
+    int celsius = 26;
+    int fahr = 9 * celsius / 5 + 32;
 
-    x = 3;
-    y = x * x;
-    printf("%d = %d * %d\n", y, x, x);
-    printf("%d * %d = %d\n", x, x, y);
+    printf("celsius = %d, fahr = %d\n", celsius, fahr);
     
     return 0;
 }
