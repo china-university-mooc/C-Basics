@@ -1,10 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int celsius = 26;
-    int fahr = 9 * celsius / 5 + 32;
-
-    printf("celsius = %d, fahr = %d\n", celsius, fahr);
+    double x, y;
+    
+    scanf("%lf", &x);
+    if (x !=0 ) {
+        y = 1 / x;
+    } else {
+        y = 0;
+    }
+    printf("f(%.1f) = %.1f\n", x, y);
     
     return 0;
 }
