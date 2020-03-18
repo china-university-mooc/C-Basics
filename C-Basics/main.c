@@ -1,24 +1,22 @@
 #include <stdio.h>
 
-int fact(int n);
+double mypow(double x, int n);
 
 int main() {
     int n;
-    scanf("%d", &n);
+    double x;
+    scanf("%lf %d", &x, &n);
     
-    int sum = 0;
-    for (int i = 1; i <= n; i++) {
-        sum += fact(i);
-    }
-    printf("%d\n", sum);
+    printf("%f\n", mypow(x, n));
 
     return 0;
 }
 
-int fact(int n) {
-    int fact = 1;
-    for (int i = 2; i <= n; i++) {
-        fact *= i;
+double mypow(double x, int n) {
+    double result = 1;
+    for (int i = 0; i < n; i++) {
+        result *= x;
     }
-    return fact;
+    return result;
 }
+
