@@ -1,20 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int fahr, lower, upper;
-    double celsius;
+    int m, n;
+    scanf("%d %d", &m, &n);
     
-    scanf("%d %d", &lower, & upper);
-    if (lower > upper) {
-        printf("Invalid.\n");
-        return 0;
+    double sum = 0;
+    for(int i = m; i <= n; i++) {
+        sum += i * i + 1.0 / i;
     }
-    
-    printf("fahr celsius\n");
-    for (fahr = lower; fahr <= upper; fahr+=2) {
-        celsius = (fahr - 32) * 5 / 9.0;
-        printf("%d%6.1f\n", fahr, celsius);
-    }
+    printf("sum = %f\n", sum);
 
     return 0;
 }
