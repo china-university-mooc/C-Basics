@@ -1,16 +1,17 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int day;
-    scanf("%d", &day);
+    int bjt;
+    scanf("%d", &bjt);
+    int bjtH = bjt / 100;
+    int bjtM = bjt % 100;
     
-    int mod = (day - 1)%5 + 1;
-    if (mod < 4) {
-        printf("Fishing in day %d\n", day);
-    } else {
-        printf("Drying in day %d\n", day);
+    int utcH = bjtH - 8;
+    if (utcH < 0) {
+        utcH += 24;
     }
+    int utc = utcH * 100 + bjtM;
     
+    printf("%d\n", utc);
     return 0;
 }
