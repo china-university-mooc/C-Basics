@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
+    int fahr, lower, upper;
+    double celsius;
     
-    double sum = 0;
-    int sign = 1;
-    int denominator = 1;
-    for (int i = 0; i < n; i++) {
-        double item = sign * 1.0 / denominator;
-        sum += item;
-        sign = -sign;
-        denominator += 3;
+    scanf("%d %d", &lower, & upper);
+    if (lower > upper) {
+        printf("Invalid.\n");
+        return 0;
     }
-    printf("sum = %.3f\n", sum);
+    
+    printf("fahr celsius\n");
+    for (fahr = lower; fahr <= upper; fahr+=2) {
+        celsius = (fahr - 32) * 5 / 9.0;
+        printf("%d%6.1f\n", fahr, celsius);
+    }
 
     return 0;
 }
