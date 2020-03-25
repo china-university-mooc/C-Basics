@@ -7,18 +7,26 @@ int main() {
     int decimal[limit];
     
     scanf("%d/%d", &a, &b);
-    if (a > b) {
-        return -1;
-    }
-    
+
     int cnt = 0;
+    int intCnt = 0;
     while (cnt < limit && a > 0) {
-        decimal[cnt++] = a * 10 / b;
-        a = a * 10 % b;
+        if (a > b) {
+            intCnt++;
+        } else {
+            a = a * 10;
+        }
+        decimal[cnt++] = a / b;
+        a = a % b;
     }
     
-    printf("0.");
+    if (intCnt == 0) {
+        printf("0");
+    }
     for (int i = 0; i < cnt; i++) {
+        if (i == intCnt) {
+            printf(".");
+        }
         printf("%d", decimal[i]);
     }
     printf("\n");
