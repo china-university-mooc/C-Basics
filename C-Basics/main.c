@@ -1,16 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int num;
-    scanf("%d", &num);
+    int const limit = 200;
+    int a;
+    int b;
+    int decimal[limit];
     
-    int a = num % 10;
-    num /= 10;
-    int b = num % 10;
-    num /= 10;
-    int c = num % 10;
+    scanf("%d/%d", &a, &b);
+    if (a > b) {
+        return -1;
+    }
     
-    int out = a * 100 + b * 10 + c;
-
-    printf("%d\n", out);
+    int cnt = 0;
+    while (cnt < limit && a > 0) {
+        decimal[cnt++] = a * 10 / b;
+        a = a * 10 % b;
+    }
+    
+    printf("0.");
+    for (int i = 0; i < cnt; i++) {
+        printf("%d", decimal[i]);
+    }
+    printf("\n");
 }
