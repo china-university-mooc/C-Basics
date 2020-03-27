@@ -61,11 +61,9 @@
 - [**IV.3-3-Prime-Sum**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-3-Prime-Sum)
 - [**IV.3-4-Read-Integer**](https://github.com/china-university-mooc/C-Basics/tree/IV.3-4-Read-Integer)
 
+
 ### Chapter V: Function
-V.1-1-High-Precision-Decimal
-V.2-11-Gcd
-V.2-5-Prime-Sum
-V.2-7-Error
+
 #### Experiment
 - [**V.2-11-Gcd**](https://github.com/china-university-mooc/C-Basics/tree/V.2-11-Gcd)
 - [**V.2-5-Prime-Sum**](https://github.com/china-university-mooc/C-Basics/tree/V.2-5-Prime-Sum)
