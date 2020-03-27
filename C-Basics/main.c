@@ -1,21 +1,44 @@
 #include <stdio.h>
-double result_real, result_imag;
-void complex_prod(double x1, double y1, double x2, double y2);
+#include <math.h>
 
-int main() {
-    double imag1, imag2, real1, real2;
-    scanf("%lf %lf", &real1, &imag1);
-    scanf("%lf %lf", &real2, &imag2);
-    
-    complex_prod(real1, imag1, real2, imag2);
-    
-    printf("product of complex is (%f)+(%f)i\n", result_real, result_imag);
-    
+int prime( int p );
+int PrimeSum( int m, int n );
+
+int main()
+{
+    int m, n, p;
+
+    scanf("%d %d", &m, &n);
+    printf("Sum of ( ");
+    for( p=m; p<=n; p++ ) {
+        if( prime(p) != 0 )
+            printf("%d ", p);
+    }
+    printf(") = %d\n", PrimeSum(m, n));
+
     return 0;
 }
 
-void complex_prod(double x1, double y1, double x2, double y2)
-{
-    result_real = x1 * x2 - y1 * y2;
-    result_imag = x1 * y2 + x2 * y1;
+int prime( int p ) {
+    if (p < 2) {
+        return 0;
+    }
+    
+    int limit = floor(sqrt(p));
+    for (int i = 2; i <= limit; i++) {
+        if (p % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int PrimeSum( int m, int n ) {
+    int sum = 0;
+    for (int i = m; i <= n; i++) {
+        if (prime(i)) {
+            sum += i;
+        }
+    }
+    return sum;
 }
