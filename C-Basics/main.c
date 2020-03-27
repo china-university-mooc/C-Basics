@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-double fact(int n);
+int gcd( int x, int y );
 
-int main() {
-    int i;
-    double sum = 0;
-    
-    for (i = 1; i <= 10; i++) {
-        sum = sum + fact(i);
-    }
-    printf("1!+2!+...+10!=%f\n", sum);
+int main()
+{
+    int x, y;
+
+    scanf("%d %d", &x, &y);
+    printf("%d\n", gcd(x, y));
 
     return 0;
 }
 
-double fact(int n) {
-    double result = 1;
-    for (int i = 1; i <= n; i++) {
-        result *= i;
+int gcd( int x, int y ) {
+    while (y > 0) {
+        int temp = x % y;
+        x = y;
+        y = temp;
     }
-    return result;
+    return x;
 }
