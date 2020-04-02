@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int rowMax(int matrix[][100], int len, int r, int c);
+int findMaxCol(int matrix[][100], int len, int r);
 int colMin(int matrix[][100], int len, int r, int c);
 
 int main()
@@ -18,11 +18,10 @@ int main()
     
     int find = 0;
     for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (rowMax(matrix, n, i, j) && colMin(matrix, n, i, j)) {
-                printf("%d %d\n", i, j);
-                find = 1;
-            }
+        int maxCol = findMaxCol(matrix, n, i);
+        if (colMin(matrix, n, i, maxCol)) {
+            printf("%d %d\n", i, maxCol);
+            find = 1;
         }
     }
     
@@ -33,15 +32,14 @@ int main()
     return 0;
 }
 
-int rowMax(int matrix[][100], int len, int r, int c) {
-    int res = 1;
-    int max = matrix[r][c];
-    for (int i = 0; i < len; i++) {
-        if (matrix[r][i] > max) {
-            res = 0;
+int findMaxCol(int matrix[][100], int len, int r) {
+    int maxCol = 0;
+    for (int j = 0; j < len; j++) {
+        if (matrix[r][j] > matrix[r][maxCol]) {
+            maxCol = j;
         }
     }
-    return res;
+    return maxCol;
 }
 
 int colMin(int matrix[][100], int len, int r, int c) {
