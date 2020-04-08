@@ -78,3 +78,9 @@
 #### 测验
 - [**VII.1-1-Polynomial-Addition**](https://github.com/china-university-mooc/C-Basics/tree/VII.1-1-Polynomial-Addition)
 - [**VII.1-2-Matrix-Saddle-Point**](https://github.com/china-university-mooc/C-Basics/tree/VII.1-2-Matrix-Saddle-Point)
+
+### 第8章：指针
+
+#### 测验
+- [**VIII.1-1-Word-Length**](https://github.com/china-university-mooc/C-Basics/tree/VIII.1-1-Word-Length)
+- [**VIII.1-2-GPS-Data-Process**](https://github.com/china-university-mooc/C-Basics/tree/VIII.1-2-GPS-Data-Process)
