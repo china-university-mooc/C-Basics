@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int num;
-    scanf("%d", &num);
+    int x,y;
+    scanf("%d/%d", &x, &y);
     
-    int a = num % 10;
-    num /= 10;
-    int b = num % 10;
-    num /= 10;
-    int c = num % 10;
+    int a = x;
+    int b = y;
+    while(b) {
+        int t = a % b;
+        a = b;
+        b = t;
+    }
     
-    int out = a * 100 + b * 10 + c;
-
-    printf("%d\n", out);
+    printf("%d/%d\n", x/a, y/a);
+    
+    return 0;
 }
